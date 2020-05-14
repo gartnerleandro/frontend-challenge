@@ -1,0 +1,12 @@
+@import '../../styles/constants.scss';
+
+.custom-select {
+  height: 30px;
+  font-size: $font-lg;
+  margin: 0 $size-md $size-lg $size-md;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
