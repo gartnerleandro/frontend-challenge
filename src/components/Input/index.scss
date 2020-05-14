@@ -1,0 +1,45 @@
+@import '../../styles/constants.scss';
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $size-md $size-lg $size-md;
+
+  input,
+  textarea {
+    font-size: $font-lg;
+    padding: $size-md $size-lg;
+    outline-width: 0;
+    background: transparent;
+    border: 1px solid $gray;
+    border-radius: $size-sm;
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,115,0,.6);
+    }
+  }
+
+  textarea {
+    font-family: inherit;
+    resize: none;
+    overflow: auto;
+    line-height: 20px;
+  }
+
+  textarea.vert {
+    resize: vertical;
+  }
+
+  textarea.noResize {
+    resize: none;
+  }
+  
+  .input-error {
+    color: $color-error;
+    margin: 0;
+    font-size: $font-sm;
+    padding: 0px 5px;
+    text-align: left;
+  }
+}
