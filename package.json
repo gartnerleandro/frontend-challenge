@@ -1,11 +1,16 @@
 {
   "name": "frontend-challenge",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "Leandro Gartner",
   "dependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -13,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-api": "node api/start.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

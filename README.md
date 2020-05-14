@@ -29,15 +29,28 @@ Open your terminal, go to te project folder and install de packages running the 
 npm install
 ```
 
-then start the development server by running:
+then start the development frontend server by running:
 
 ```
 npm start
 ```
 
+now, open a new terminal tab and start the development api server by running:
+
+```
+npm run start-api
+```
+
+  > ⚠️ IMPORTANT: all the terminals need to keep alife to use the project.
+
+## Troubleshooting
+
+If you are not using de default port on the api (3000) make sure to change the port on the `API_URL`constant It is on the `/src/constants/` folder.
+
 ## Built With
 
 * [React](https://es.reactjs.org/docs/getting-started.html) - The framework used
+* [Express](https://expressjs.com/es/starter/installing.html) - The api framework used
 * [Create React App](https://github.com/facebook/create-react-app)
 
 ## Authors
