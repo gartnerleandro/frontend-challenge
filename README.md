@@ -45,7 +45,7 @@ npm run start-api
 
 ## Troubleshooting
 
-If you are not using de default port on the api (3000) make sure to change the port on the `API_URL`constant It is on the `/src/constants/` folder.
+If you are not using de default port on the api (3001) make sure to change the port on the `API_URL`constant It is on the `/src/constants/` folder.
 
 ## Built With
 
