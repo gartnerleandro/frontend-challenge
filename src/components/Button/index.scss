@@ -1,0 +1,43 @@
+@import '../../styles/constants.scss';
+
+.btn {
+  align-items: center;
+  border-radius: $size-xl;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  font-family: 'Arial', sans-serif;
+  font-size: $font-lg;
+  justify-content: center;
+  outline: none;
+  padding: $size-lg $size-xl;
+  transition: all linear 200ms;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $gray;
+    border-color: $gray;
+    color: $white;
+  }
+}
+
+.btn.primary:not(:disabled) {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+  }
+}
+
+.btn.transparent:not(:disabled) {
+  background-color: 'transparent';
+  border-width: 0px;
+  color: $black;
+}
