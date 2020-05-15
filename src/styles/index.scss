@@ -22,4 +22,21 @@ code {
 
 .app {
   min-height: 100vh;
+
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+    margin: $size-lg $size-md;
+  
+    .label {
+      margin-bottom: $size-md;
+      font-weight: 500;
+    }
+  
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
