@@ -1,0 +1,51 @@
+@import '../../styles/constants.scss';
+
+.custom-progress {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $size-lg 0;
+  margin: 0 $size-md;
+
+  .steps {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $size-md;
+
+    .step-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 33%;
+      height: 32px;
+      color: $gray;
+
+      .circle-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        margin-right: $size-sm;
+        border: 1px solid $gray;
+        border-radius: 16px;
+        padding: $size-sm;
+      }
+    }
+
+    .step-number.current {
+      color: $secondary;
+
+      .circle-wrapper {
+        border-color: $secondary;
+      }
+    }
+  }
+
+  .progress-bar {
+    background-color: $primary;
+    height: $size-md;
+    transition: width 0.7s linear;
+    border-radius: $size-sm;
+  }
+}
