@@ -61,10 +61,11 @@ const Input = ({
             value={inputValue}
             min={min}
             max={max}
+            className={error ? 'input-error' : ''}
           />
         )
       }
-      {error && errorText && <p className="input-error" data-testid="input-error-text">{errorText}</p>}
+      {error && errorText && <p className="input-error-text" data-testid="input-error-text">{errorText}</p>}
     </div>
   );
 };

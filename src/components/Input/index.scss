@@ -34,8 +34,12 @@
   textarea.noResize {
     resize: none;
   }
-  
+
   .input-error {
+    border-color: $color-error;
+  }
+  
+  .input-error-text {
     color: $color-error;
     margin: 0;
     font-size: $font-sm;
