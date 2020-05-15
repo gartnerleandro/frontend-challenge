@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 
 import Button, { BUTTON_TYPES } from '../../Button';
 import Selector from '../../Selector';
+import ErrorBox from '../../ErrorBox';
 
 import getCategories from '../../../actions/category';
 
 import { SET_CATEGORY, SET_SUBCATEGORY, SET_PRICE } from '../../../constants';
-
-import './index.scss';
 
 const priceOptions = [
   { value: 'Lo más barato' },
@@ -84,13 +83,7 @@ const SecondForm = ({
         options={priceOptions}
         selected={price}
       />
-      {
-        error && (
-          <div className="error-message">
-            {error}
-          </div>
-        )
-      }
+      <ErrorBox message={error} />
       <div className="footer">
         <Button text="« Volver" onClick={onPrev} type={BUTTON_TYPES.transparent} />
         <Button text="Continuar »" onClick={onNext} disabled={!category || !subcategory} />
