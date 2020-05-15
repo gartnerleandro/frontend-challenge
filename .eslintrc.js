@@ -22,8 +22,9 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "react/jsx-filename-extension": "off",
         "arrow-parens": ["error", "always"],
-        "react/forbid-prop-types": ["error", { "forbid": [] }],
+        "jsx-a11y/label-has-associated-control": [ "error", {
+            "controlComponents": ["Input", "Selector"],
+        }],
     }
 };
