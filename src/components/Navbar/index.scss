@@ -1,0 +1,82 @@
+@import '../../styles/constants.scss';
+
+.navbar-wrapper {
+  background-color: $white;
+
+  .navbar-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 95px;
+    padding: 0 $size-md;
+
+    .logo-wrapper {
+      flex: 0 47%;
+
+      .logo-image {
+        width: 185px;
+        object-fit: contain;
+      }
+    }
+
+    .register {
+      flex: 0 47%;
+    }
+
+    .menu {
+      padding: $size-sm;
+      flex: 0 5%;
+      visibility: hidden;
+    }
+
+    .rotate {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 $size-md;
+    width: 100%;
+    border-top: 1px solid $gray-light;
+
+    button {
+      flex: 1;
+      display: flex;
+      transition: all linear 0.3s;
+      padding: $size-md;
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .navbar-links.hidden {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 $size-md;
+    height: 0;
+    display: none;
+
+    button {
+      height: 0;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .navbar-wrapper {
+    .navbar-top {
+      .menu {
+        visibility: visible;
+      }
+    }
+    .navbar-links {
+      flex-direction: column;
+    }
+  }
+}
