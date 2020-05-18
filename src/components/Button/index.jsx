@@ -9,10 +9,14 @@ export const BUTTON_TYPES = {
 };
 
 const Button = ({
-  type, text, onClick, disabled,
+  type,
+  text,
+  onClick,
+  disabled,
+  className,
 }) => (
   <button
-    className={`btn ${type}`}
+    className={`btn ${type} ${className}`}
     type="button"
     onClick={onClick}
     data-testid="custom-button"
@@ -23,12 +27,14 @@ const Button = ({
 );
 
 Button.defaultProps = {
+  className: '',
   disabled: false,
   text: '',
   type: BUTTON_TYPES.primary,
 };
 
 Button.propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   text: PropTypes.string,
