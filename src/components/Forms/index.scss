@@ -1,0 +1,41 @@
+@import '../../styles/constants.scss';
+
+.forms-wrapper {
+  border: 1px solid $gray-dark;
+  background-color: $white;
+  flex: 0 55%;
+
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: $gray-darker;
+    color: $white;
+
+    .title {
+      padding: $size-lg;
+      font-size: $font-xl;
+      font-weight: 600;
+    }
+
+    .free {
+      background-color: $primary;
+      padding: $size-lg;
+      font-size: $font-xl;
+      font-weight: 600;
+    }
+  }
+
+  .end-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .done-icon {
+      color: $color-success;
+    }
+  }
+}
