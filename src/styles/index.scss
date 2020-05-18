@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $gray-light;
 }
 
 code {
@@ -23,6 +24,79 @@ code {
 .app {
   min-height: 100vh;
 
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 $size-md $size-lg $size-md;
+
+    .title {
+      font-size: $font-title;
+      font-weight: 400;
+    }
+
+    .subtitle {
+      font-size: $font-xl;
+      font-weight: 400;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    padding: 0 $size-md $size-xl $size-md;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .info-steps {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex: 0 35%;
+      padding-right: $size-sm;
+
+      .step {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .step-number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: $size-sm;
+          background-color: $white;
+          padding: $size-md;
+          width: 20px;
+          height: 20px;
+          border-radius: 20px;
+          font-size: $font-xl;
+        }
+      }
+
+      .info-box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .icon-info {
+          font-size: $font-subtitle;
+          color: $primary;
+          padding: 0 $size-md;
+        }
+
+        .body-info {
+          display: flex;
+          flex-direction: column;
+          
+          .info-title {
+            margin-bottom: $size-md;
+          }
+        }
+
+      }
+    }
+  }
+
   .custom-form {
     display: flex;
     flex-direction: column;
@@ -37,6 +111,39 @@ code {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .app .content .info-steps {
+    flex: 1 43%;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .app .content {
+    flex-direction: column;
+
+    .info-steps {
+      flex-direction: row;
+      margin-bottom: $size-lg;
+
+      .step {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $size-md;
+        flex: 0 33%;
+
+        p {
+          text-align: center;
+        }
+      }
+
+      .info-box {
+        display: none;
+      }
     }
   }
 }
